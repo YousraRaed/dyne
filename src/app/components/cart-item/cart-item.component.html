@@ -1,0 +1,31 @@
+<mat-card class="item-card">
+  <div class="display">
+    <div>
+      <img
+        mat-card-image
+        [src]="item?.item?.thumbnail"
+        alt="{{ item?.item?.thumbnail }}"
+      />
+    </div>
+    <div>
+      <mat-card-content>
+        <h2>{{ item?.item?.name }}</h2>
+        <div class="space"></div>
+        <p class="price">{{ item?.item?.price }} EGP</p>
+      </mat-card-content>
+    </div>
+    <div>
+      <mat-card-actions>
+        <div (click)="handleAdd()">
+          <img src="assets/add.svg" alt="add" class="add-icon" />
+        </div>
+        <div class="quantity">
+          {{ item?.quantity }}
+        </div>
+        <div (click)="handleRemove()">
+          <img src="assets/remove.svg" alt="remove" class="remove-icon" />
+        </div>
+      </mat-card-actions>
+    </div>
+  </div>
+</mat-card>

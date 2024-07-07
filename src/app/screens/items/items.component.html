@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <div (click)="goBack()">
+    <img src="assets/back.svg" alt="back" class="back-icon" />
+  </div>
+  <span class="title">{{ name }}</span>
+  <span class="spacer"></span>
+  <button
+    mat-icon-button
+    [matBadge]="cartItems$ | async"
+    matBadgeColor="warn"
+    (click)="checkout()"
+  >
+    <img src="assets/cart.svg" alt="cart" class="cart-icon" />
+  </button>
+</mat-toolbar>
+<div class="items">
+  <app-item
+    *ngFor="let item of items$ | async"
+    [item]="item"
+    (addItem)="addToCart($event)"
+  ></app-item>
+</div>

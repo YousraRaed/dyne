@@ -1,0 +1,28 @@
+.menu-item-card {
+  width: 100%;
+  min-width: 163px;
+  margin: 3px;
+  margin-bottom: 15px;
+}
+
+.card-image {
+  height: 263px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  justify-content: center;
+  &.darken {
+    filter: brightness(0.8);
+  }
+}
+
+.menu-name {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.2px;
+  text-align: left;
+  color: white;
+}

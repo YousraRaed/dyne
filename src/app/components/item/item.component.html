@@ -1,0 +1,22 @@
+<mat-card class="item-card">
+  <div class="display">
+    <div>
+      <img mat-card-image [src]="item?.thumbnail" alt="{{ item?.thumbnail }}" />
+    </div>
+    <div>
+      <mat-card-content>
+        <h2>{{ item?.name }}</h2>
+        <p class="description">{{ item?.description }}</p>
+        <p class="price">{{ item?.price }} EGP</p>
+      </mat-card-content>
+    </div>
+    <div>
+      <mat-card-actions>
+        <div (click)="item?.availability ? handleAdd() : ''">
+          <img src="assets/add.svg" alt="add" class="add-icon" />
+        </div>
+      </mat-card-actions>
+    </div>
+  </div>
+  <div *ngIf="!item?.availability" class="unavailable-overlay">Unavailable</div>
+</mat-card>

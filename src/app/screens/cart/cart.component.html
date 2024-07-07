@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <div (click)="goBack()">
+    <img src="assets/back.svg" alt="back" class="back-icon" />
+  </div>
+  <span class="title">Cart</span>
+  <span class="spacer"></span>
+</mat-toolbar>
+<div class="items">
+  <app-cart-item
+    *ngFor="let item of cartItems$ | async"
+    [item]="item"
+    (addItem)="addToCart($event)"
+    (removeItem)="removeFromCart($event)"
+  ></app-cart-item>
+</div>
+<div class="checkout-container">
+  <button mat-raised-button color="primary" (click)="checkout()">
+    <div class="order">Order</div>
+    <div class="amount">{{ amount$ | async }} Egp</div>
+  </button>
+</div>

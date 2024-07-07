@@ -1,0 +1,11 @@
+<mat-card class="menu-item-card">
+  <div
+    class="card-image darken"
+    [ngStyle]="{
+      'background-image':
+        'url(' + (menu?.background || 'assets/default-background.jpg') + ')'
+    }"
+  >
+    <div class="menu-name">{{ menu?.name || "Unnamed Menu" }}</div>
+  </div>
+</mat-card>

@@ -1,0 +1,22 @@
+<mat-card class="restaurant-card">
+  <div
+    class="card-image darken"
+    [ngStyle]="{
+      'background-image':
+        'url(' +
+        (restaurant?.restaurantBackground || restaurant?.background) +
+        ')'
+    }"
+  >
+    <div>
+      <div class="restaurant-name">{{ restaurant?.name }}</div>
+      <mat-card-content>
+        <div class="tags">
+          <div *ngFor="let tag of restaurant?.tags" class="tag">
+            {{ tag }}
+          </div>
+        </div>
+      </mat-card-content>
+    </div>
+  </div>
+</mat-card>
