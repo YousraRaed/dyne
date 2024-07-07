@@ -18,13 +18,11 @@ export class CartService {
     return this.http.post(url, order, { responseType: 'text' }).pipe(
       map((response: string) => {
         try {
-          // Fix the JSON response if it is not valid
           const fixedResponse = response
             .replace(/(\w+):/g, '"$1":')
             .replace(/'/g, '"');
           return JSON.parse(fixedResponse);
         } catch (error) {
-          console.error('Error parsing response:', error);
           return response;
         }
       }),
