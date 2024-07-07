@@ -16,6 +16,6 @@
 <div class="checkout-container">
   <button mat-raised-button color="primary" (click)="checkout()">
     <div class="order">Order</div>
-    <div class="amount">{{ amount$ | async }} Egp</div>
+    <div class="amount">{{ amount$ | async | number : "1.0-2" }} Egp</div>
   </button>
 </div>

@@ -47,3 +47,17 @@ body {
   display: flex;
   flex-direction: column;
 }
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("/assets/fonts/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-Meduim";
+  src: url("/assets/fonts/Inter-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-Semi-Bold";
+  src: url("/assets/fonts/Inter-SemiBold.ttf") format("truetype");
+}
