@@ -11,6 +11,7 @@ Dyne is a web application built using Angular and NgRx for state management. It 
 - [Running Tests](#running-tests)
 - [State Management](#state-management)
 - [Responsive Design](#responsive-design)
+- [Deplyed URL](#deployed-url)
 
 ## Features
 
@@ -31,7 +32,13 @@ Dyne is a web application built using Angular and NgRx for state management. It 
    cd dyne
    ```
 
-2. Install the dependencies:
+2. Change branch:
+
+   ```bash
+   git checkout master
+   ```
+
+3. Install the dependencies:
 
    ```bash
    npm install
@@ -71,3 +78,7 @@ The application is designed to be responsive, ensuring a seamless experience acr
 - **SCSS Flexbox and Grid**: Utilized for creating flexible and adaptive layouts.
 - **Media Queries**: Applied to adjust styles based on device characteristics, such as width, height, and orientation.
 - **Angular Material**: Components from Angular Material are used to provide a consistent and responsive user interface.
+
+## Deployed URL
+
+https://yousraraed.github.io/dyne/
