@@ -48,8 +48,8 @@ export const cartReducer = createReducer(
         { ...cartItem, quantity: cartItem.quantity ?? 1 },
       ];
     }
-    const order = updatedCartItems.map((item) => ({
-      itemId: item.item.id,
+    const order: CartModel[] = updatedCartItems.map((item) => ({
+      itemId: item.item.id ?? 0,
       quantity: item.quantity,
     }));
     const totalAmount = updatedCartItems.reduce(
@@ -74,8 +74,8 @@ export const cartReducer = createReducer(
       )
       .filter((item) => item.quantity > 0);
 
-    const order = updatedCartItems.map((item) => ({
-      itemId: item.item.id,
+    const order: CartModel[] = updatedCartItems.map((item) => ({
+      itemId: item.item.id ?? 0,
       quantity: item.quantity,
     }));
 

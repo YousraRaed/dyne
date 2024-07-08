@@ -36,7 +36,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./items.component.scss'],
 })
 export class ItemsComponent implements OnInit {
-  items$?: Observable<Partial<ItemModel>[]>;
+  items$?: Observable<ItemModel[]>;
   loading$?: Observable<boolean>;
   error$?: Observable<any>;
   cartItems$?: Observable<number>;

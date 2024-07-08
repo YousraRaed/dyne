@@ -1,6 +1,5 @@
 // src/app/store/actions/cart.actions.ts
 import { createAction, props } from '@ngrx/store';
-import { CartModel } from '../../models/cart';
 import { ItemModel } from '../../models/item';
 
 export const addItemToCart = createAction(
