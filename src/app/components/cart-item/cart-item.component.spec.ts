@@ -11,7 +11,14 @@ describe('CartItemComponent', () => {
   let component: CartItemComponent;
   let fixture: ComponentFixture<CartItemComponent>;
   let item: Partial<{ item: ItemModel; quantity: number }> = {
-    item: { id: 1, name: 'Test Item', price: 100, thumbnail: 'test.jpg' },
+    item: {
+      id: 1,
+      name: 'Test Item',
+      price: 100,
+      thumbnail: 'test.jpg',
+      description: 'description',
+      availability: true,
+    },
     quantity: 2,
   };
 

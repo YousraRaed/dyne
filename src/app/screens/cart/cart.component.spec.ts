@@ -56,8 +56,28 @@ describe('CartComponent', () => {
 
   it('should select cart items from the store', () => {
     const mockItems: Partial<{ item: ItemModel; quantity: number }>[] = [
-      { item: { id: 1, name: 'Item 1' }, quantity: 2 },
-      { item: { id: 2, name: 'Item 2' }, quantity: 3 },
+      {
+        item: {
+          id: 1,
+          name: 'Item 1',
+          description: 'description',
+          availability: true,
+          thumbnail: '',
+          price: 100,
+        },
+        quantity: 2,
+      },
+      {
+        item: {
+          id: 2,
+          name: 'Item 2',
+          description: 'description',
+          availability: true,
+          thumbnail: '',
+          price: 100,
+        },
+        quantity: 3,
+      },
     ];
 
     spyOn(store, 'select').and.returnValue(of(mockItems));
@@ -68,7 +88,14 @@ describe('CartComponent', () => {
   });
 
   it('should add item to cart', () => {
-    const mockItem: ItemModel = { id: 1, name: 'Item 1' };
+    const mockItem: ItemModel = {
+      id: 1,
+      name: 'Item 1',
+      description: 'description',
+      availability: true,
+      thumbnail: '',
+      price: 100,
+    };
 
     spyOn(store, 'dispatch');
     component.addToCart(mockItem);
@@ -78,7 +105,14 @@ describe('CartComponent', () => {
   });
 
   it('should remove item from cart', () => {
-    const mockItem: ItemModel = { id: 1, name: 'Item 1' };
+    const mockItem: ItemModel = {
+      id: 1,
+      name: 'Item 1',
+      description: 'description',
+      availability: true,
+      thumbnail: '',
+      price: 100,
+    };
 
     spyOn(store, 'dispatch');
     component.removeFromCart(mockItem);
