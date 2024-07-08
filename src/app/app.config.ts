@@ -15,6 +15,9 @@ import { ItemEffects } from './store/effects/item.effect';
 import { itemReducer } from './store/reducers/item.reducer';
 import { CartEffects } from './store/effects/cart.effect';
 import { cartReducer } from './store/reducers/cart.reducer';
+import { HydrationEffects } from './store/effects/hydration.effect';
+import { localStorageSyncReducer } from './store/reducers/localStorageSync.reducer';
+import { hydrationMetaReducer } from './store/reducers/hydration.reducer';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
@@ -23,12 +26,22 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideHttpClient(),
     provideAnimations(),
-    provideStore({
-      restaurant: restaurantReducer,
-      items: itemReducer,
-      cart: cartReducer,
-    }),
-    provideEffects([RestaurantEffects, ItemEffects, CartEffects]),
+    provideStore(
+      {
+        restaurant: restaurantReducer,
+        items: itemReducer,
+        cart: cartReducer,
+      },
+      {
+        metaReducers: [localStorageSyncReducer, hydrationMetaReducer],
+      }
+    ),
+    provideEffects([
+      RestaurantEffects,
+      ItemEffects,
+      CartEffects,
+      HydrationEffects,
+    ]),
     provideStoreDevtools({ maxAge: 25, logOnly: false }),
   ],
 };

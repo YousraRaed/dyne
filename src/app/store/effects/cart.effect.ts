@@ -1,4 +1,3 @@
-// src/app/store/effects/cart.effects.ts
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of, EMPTY } from 'rxjs';

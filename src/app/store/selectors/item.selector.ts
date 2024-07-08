@@ -1,5 +1,4 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
-import { ItemModel } from '../../models/item';
 import { ItemState } from '../reducers/item.reducer';
 
 export const selectItemState = createFeatureSelector<ItemState>('items');

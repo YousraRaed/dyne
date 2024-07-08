@@ -1,4 +1,3 @@
-// src/app/store/reducers/cart.reducer.ts
 import { createReducer, on } from '@ngrx/store';
 import { CartModel } from '../../models/cart';
 import { ItemModel } from '../../models/item';
