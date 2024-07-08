@@ -1,4 +1,10 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -11,6 +17,7 @@ import { ItemModel } from '../../models/item';
   imports: [CommonModule, MatCardModule, MatButtonModule, MatIconModule],
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ItemComponent {
   @Input() item?: ItemModel;

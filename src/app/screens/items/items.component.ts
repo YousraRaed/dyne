@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -34,6 +34,7 @@ import { Router } from '@angular/router';
   ],
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ItemsComponent implements OnInit {
   items$?: Observable<ItemModel[]>;
