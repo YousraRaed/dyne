@@ -1,27 +1,64 @@
 # Dyne
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
+Dyne is a web application built using Angular and NgRx for state management. It allows users to browse restaurants, view menus, and manage a shopping cart.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Running Tests](#running-tests)
+- [State Management](#state-management)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Browse restaurants
+- View restaurant menus
+- Add items to the shopping cart
+- Remove items from the shopping cart
+- Checkout
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Installation
 
-## Running unit tests
+1. Clone the repository:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   git clone https://github.com/YousraRaed/dyne.git
+   cd dyne
+   ```
 
-## Running end-to-end tests
+2. Install the dependencies:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   npm install
+   ```
 
-## Further help
+## Running the Application
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+To run the application locally:
+
+```bash
+ng serve
+```
+
+## Running Tests
+
+To run the application locally:
+
+```bash
+ng test
+```
+
+## State Management
+
+The application uses NgRx for state management. The state is divided into different slices for restaurants, items, and the shopping cart.
+
+### Hydration
+
+State hydration is implemented to persist the cart state across page reloads. This is achieved using meta-reducers for syncing the state with `localStorage`.
+
+- **hydrationMetaReducer**: Rehydrates the state from `localStorage` on application initialization.
+- **localStorageSyncReducer**: Saves the state to `localStorage` on state changes.
