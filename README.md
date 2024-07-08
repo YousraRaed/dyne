@@ -10,6 +10,7 @@ Dyne is a web application built using Angular and NgRx for state management. It 
 - [Running the Application](#running-the-application)
 - [Running Tests](#running-tests)
 - [State Management](#state-management)
+- [Responsive Design](#responsive-design)
 
 ## Features
 
@@ -62,3 +63,11 @@ State hydration is implemented to persist the cart state across page reloads. Th
 
 - **hydrationMetaReducer**: Rehydrates the state from `localStorage` on application initialization.
 - **localStorageSyncReducer**: Saves the state to `localStorage` on state changes.
+
+## Responsive Design
+
+The application is designed to be responsive, ensuring a seamless experience across various devices and screen sizes. This is achieved through:
+
+- **SCSS Flexbox and Grid**: Utilized for creating flexible and adaptive layouts.
+- **Media Queries**: Applied to adjust styles based on device characteristics, such as width, height, and orientation.
+- **Angular Material**: Components from Angular Material are used to provide a consistent and responsive user interface.
